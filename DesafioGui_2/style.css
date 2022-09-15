@@ -7,12 +7,12 @@ label{
     font-size: 30px;
 }
 
-form {
+#geral {
     max-width: 550px;
-    margin: 0 auto;
+    margin-left: 550px; 
 }
 
-input, textarea {
+input, #retorno {
     width: 400px;
     box-sizing: border-box;
     padding: .5rem;
@@ -22,19 +22,15 @@ input, textarea {
     border-radius: 7px;
 }
 
-textarea {
+#retorno {
     height:600px;
     width: 600px;
     border-radius: 7px;
     opacity: 1;
+    background: #fff;
 }
 
 
-textarea {
-    height:600px;
-    width: 600px;
-
-}
 
 
 
