@@ -5,7 +5,8 @@ let retornoGit = document.getElementById('retorno')
 button.addEventListener('click', retorno)
 
 function retorno(event){
-    event.preventDefault()
+    event.preventDefault();
+    retornoGit.innerText = '';
     let usuario = '';
     usuario = input.value;
     input.value = '';
@@ -13,10 +14,10 @@ function retorno(event){
     .then(async response => {
         let data = await response.json()
         data.map(item =>{
-            retornoGit.innerText = `
+            retornoGit.innerText += `
             ${item.name.toUpperCase()}
             URL: ${item.url}`
         })        
     })
-    .catch(e => console.log('Usuário não encontrado'))
+    .catch(e => console.log('Usuário não encontrado'));
 };
