@@ -11,29 +11,26 @@ const cepInfo = {
 
 btnConsultar.addEventListener('click', consultar)
 
-function consultar(event){
+async function consultar(event){
     event.preventDefault()
-    const valueCepUser = cepInfo.cepUser.value
-    fetch(`https://viacep.com.br/ws/${valueCepUser}/json/`)
-    .then(response => {
-        return response.json()
+    try {
+        const valueCepUser = cepInfo.cepUser.value
+        const response = await fetch(`https://viacep.com.br/ws/${valueCepUser}/json/`)
+        const jsonDados = await response.json()
 
-    })
-    .then(JSONresponse => {
-        let data = JSONresponse;
-        cepInfo.ruaUser.value = data.logradouro;
-        cepInfo.bairroUser.value = data.bairro;
-        cepInfo.ufUser.value = data.uf;
-        cepInfo.cidadeUser.value = data.localidade;
-    })
-    .catch(e => {
+        cepInfo.ruaUser.value = jsonDados.logradouro;
+        cepInfo.bairroUser.value = jsonDados.bairro;
+        cepInfo.ufUser.value = jsonDados.uf;
+        cepInfo.cidadeUser.value = jsonDados.localidade;
+    }
+    catch {
         cepInfo.cepUser.value = 'Erro ao consultar'
         cepInfo.ruaUser.value = '';
         cepInfo.bairroUser.value = '';
         cepInfo.ufUser.value = '';
         cepInfo.cidadeUser.value = '';
-    })
-}
+    }
+};
 
 btnLimpar.addEventListener('click', limparInputs)
 
