@@ -3,6 +3,7 @@
 // clicar em próxima
 
 const btn = document.querySelector('[data-confirmar]');
+const retorno = document.getElementById('retorno');
 
 btn.addEventListener('click', requisicionPiada)
 
@@ -11,8 +12,8 @@ async function requisicionPiada(event){
     try{
         const response = await fetch('https://api.chucknorris.io/jokes/random')
         const Jsonresponse = await response.json()
-        console.log(Jsonresponse)
 
+        retorno.innerText = Jsonresponse.value
     }
     catch(error){
         console.log(error)

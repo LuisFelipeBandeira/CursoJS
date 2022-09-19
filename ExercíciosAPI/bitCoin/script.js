@@ -24,7 +24,8 @@ async function consultaBitCoin(){
     }catch(error){
         console.log(error + '   Erro na requisição')
     }
-}
+};
+
+setInterval(consultaBitCoin, 1000 * 30);
+
 consultaBitCoin()
-
-
