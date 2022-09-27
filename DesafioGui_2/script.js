@@ -17,6 +17,7 @@ function retorno(event){
             retornoGit.innerText += `
             ${item.name.toUpperCase()}
             URL: ${item.url}`
+            console.log('tlgd')
         })        
     })
     .catch(e => console.log('Usuário não encontrado'));
