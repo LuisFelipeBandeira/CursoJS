@@ -15,14 +15,14 @@
     <div class="principal">
         <div class="Incluir">
           <span>Cadastro de Funcionários Q2</span>
-          <button onclick="openModal()" id="new">Incluir</i></button>
+          <button id="incluir">Cadastrar</i></button>
         </div>
     
         <div class="divTable">
           <table>
             <thead>
               <tr>
-                <th>Nome</th>
+                <th id="nomeTh">Nome</th>
                 <th>Setor</th>
                 <th>Email</th>
                 <th class="acao">Editar</th>
@@ -34,9 +34,10 @@
           </table>
         </div>
     
-        <div class="modal-container active" >
+        <div class="modal-container-cadastro " >
           <div class="modal">
             <form>
+                <h1>Cadastro</h1>
                 <label class="cadastrolabels" for="nome">Nome</label>
                 <input class="inputCadastro" type="text" required>
                 <label class="cadastrolabels" for="setor">Setor</label>
@@ -47,10 +48,25 @@
             </form>
           </div>
         </div>
+
+        <div class="modal-container-alteração " >
+          <div class="modal">
+            <form>
+                <h1>Alteração</h1>
+                <label class="cadastrolabels" for="nome">Nome</label>
+                <input class="inputCadastro" type="text" required>
+                <label class="cadastrolabels" for="setor">Setor</label>
+                <input class="inputCadastro" type="text" required>
+                <label class="cadastrolabels" for="email">Email</label>
+                <input class="inputCadastro" type="email" id="email" required>
+                <button id="btnCadastro">Alterar</button>
+            </form>
+          </div>
+        </div>
     
       </div>
 
-    <script src="/CRUD/script.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>
