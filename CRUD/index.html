@@ -14,7 +14,7 @@
 
     <div class="principal">
         <div class="Incluir">
-          <span>Cadastro de Funcionários Q2</span>
+          <span>Cadastro de Colaboradores Q2</span>
           <button id="incluir">Cadastrar</i></button>
         </div>
     
@@ -25,11 +25,10 @@
                 <th id="nomeTh">Nome</th>
                 <th>Setor</th>
                 <th>Email</th>
-                <th class="acao">Editar</th>
-                <th class="acao">Excluir</th>
               </tr>
             </thead>
             <tbody>
+
             </tbody>
           </table>
         </div>
@@ -39,27 +38,33 @@
             <form>
                 <h1>Cadastro</h1>
                 <label class="cadastrolabels" for="nome">Nome</label>
-                <input class="inputCadastro" type="text" required>
+                <input class="inputCadastro" id="inputNome" type="text" required>
+
                 <label class="cadastrolabels" for="setor">Setor</label>
-                <input class="inputCadastro" type="text" required>
+                <input class="inputCadastro" id="inputSetor" type="text" required>
+
                 <label class="cadastrolabels" for="email">Email</label>
-                <input class="inputCadastro" type="email" id="email" required>
+                <input class="inputCadastro" id="inputEmail" type="email" id="email" required>
+
                 <button id="btnCadastro">Cadastrar</button>
             </form>
           </div>
         </div>
 
-        <div class="modal-container-alteração " >
+        <div class="modal-container-alteração" >
           <div class="modal">
             <form>
                 <h1>Alteração</h1>
                 <label class="cadastrolabels" for="nome">Nome</label>
-                <input class="inputCadastro" type="text" required>
+                <input id="inputUpdateName" class="inputCadastro" type="text" required>
+
                 <label class="cadastrolabels" for="setor">Setor</label>
-                <input class="inputCadastro" type="text" required>
+                <input id="inputUpdateSetor" class="inputCadastro" type="text" required>
+                
                 <label class="cadastrolabels" for="email">Email</label>
-                <input class="inputCadastro" type="email" id="email" required>
-                <button id="btnCadastro">Alterar</button>
+                <input id="inputUpdateEmail" class="inputCadastro" type="email" id="email" required>
+                
+                <button id="btnAlteracao">Alterar</button>
             </form>
           </div>
         </div>
